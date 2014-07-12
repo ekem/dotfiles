@@ -1,0 +1,1 @@
+/home/ekem/.vimrc
