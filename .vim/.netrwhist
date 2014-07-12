@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/mnt/storage/Projects/Git/ourobous'
+let g:netrw_dirhist_2='/mnt/storage/Projects/C/mcdaemon'
+let g:netrw_dirhist_3='/mnt/storage/Projects/C'
+let g:netrw_dirhist_4='/mnt/storage/Projects'
+let g:netrw_dirhist_5='/mnt/storage/Projects/C'
+let g:netrw_dirhist_6='/mnt/storage/Projects/C/mcdaemon'
+let g:netrw_dirhist_7='/etc/init.d'
