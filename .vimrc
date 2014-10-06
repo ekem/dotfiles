@@ -1,31 +1,40 @@
 ﻿" pathogen plugin
 " filetype off
 " Rebind <Leader> key
+set hidden
 let mapleader = ","
 
 " Quicksave
 noremap <C-Z> :update<CR>
 vnoremap <C-Z> <C-C>:update<CR>
 inoremap <C-Z> <C-O>:update<CR>
-"""
 
 " Quick quit command
 noremap <Leader>e :quit<CR>
 noremap <Leader>E :qa!<CR>
+
 " Tab Navigation
 map <Leader>n <esc>:tabprevious<CR>
 map <Leader>m <esc>:tabnext<CR>
+
+set pastetoggle=<F2>
+inoremap <F9> <C-O>za
+nnoremap <space> za
+onoremap <F9> <C-c>za
+vnoremap <space> zf
+
+
 set t_Co=256
 color molokai
+let g:rehash256=1
+"let g:molokai_original=1
 
 set nocompatible
 filetype off
-filetype plugin indent on
-syntax on
 
 set ruler
 set magic
-set noerrorbells
+set noeb vb t_vb=
 
 " colorscheme darkblue
 " set background=dark
@@ -46,7 +55,12 @@ nmap Q gqap
 
 " use pathogen for plugin management
 call pathogen#infect()
+call pathogen#helptags()
 
+syntax on
+filetype on
+filetype plugin indent on
+let g:SuperTabDefaultCompletionType = "context"
 set cmdheight=2
 
 set ignorecase
@@ -59,5 +73,3 @@ hi SpecialKey guifg=gray
 hi Normal guifg=white
 
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
-
-autocmd FileType py source ~/.vim/py.vim
